@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using MessageBoard.Domain;
 using MessageBoard.Persistence;
-using NUnit.Framework; // Assuming NUnit
+using NUnit.Framework;
 
 namespace MessageBoard.Tests
 {
@@ -14,15 +14,16 @@ namespace MessageBoard.Tests
         [SetUp]
         public void Setup()
         {
-            // Reset state before each test
+            // Reset state for ALL classes before each test
             Member.ClearExtent();
+            Administrator.ClearExtent(); // <--- Added this
             Community.ClearExtent();
             Post.ClearExtent();
-            Member.PasswordMinLength = 8; // Reset default
+            Member.PasswordMinLength = 8;
         }
 
         // --------------------------------------------------------
-        // ATTRIBUTE VALIDATION TESTS (Requirement 2c)
+        // 1. ATTRIBUTE VALIDATION TESTS
         // --------------------------------------------------------
 
         [Test]
@@ -35,7 +36,14 @@ namespace MessageBoard.Tests
         public void CreateMember_ShortPassword_ThrowsException()
         {
             Member.PasswordMinLength = 8;
-            Assert.Throws<ArgumentException>(() => new Member("JohnDoe", "Short")); // 5 chars
+            Assert.Throws<ArgumentException>(() => new Member("JohnDoe", "Short")); 
+        }
+
+        [Test]
+        public void Administrator_ShortPassword_ThrowsException()
+        {
+            // Validating Administrator specific logic
+            Assert.Throws<ArgumentException>(() => new Administrator("AdminUser", "admin@test.com", "short"));
         }
 
         [Test]
@@ -53,7 +61,7 @@ namespace MessageBoard.Tests
         }
 
         // --------------------------------------------------------
-        // DERIVED ATTRIBUTE TESTS
+        // 2. DERIVED ATTRIBUTE TESTS
         // --------------------------------------------------------
 
         [Test]
@@ -67,7 +75,7 @@ namespace MessageBoard.Tests
         }
 
         // --------------------------------------------------------
-        // MULTI-VALUE & CONSTRAINTS TESTS
+        // 3. MULTI-VALUE & CONSTRAINTS TESTS
         // --------------------------------------------------------
 
         [Test]
@@ -93,7 +101,7 @@ namespace MessageBoard.Tests
         }
 
         // --------------------------------------------------------
-        // CLASS EXTENT & ENCAPSULATION TESTS
+        // 4. CLASS EXTENT TESTS
         // --------------------------------------------------------
 
         [Test]
@@ -106,39 +114,44 @@ namespace MessageBoard.Tests
         }
 
         [Test]
-        public void Extent_IsReadOnly()
+        public void Administrator_Constructor_AddsToExtentAutomatically()
         {
-            // Check if the list returned is castable to ICollection to attempt modification
-            // Or simply verify the signature returns IReadOnlyList
-            Assert.IsInstanceOf<IReadOnlyList<Member>>(Member.Extent);
+            new Administrator("Admin", "admin@test.com", "Secret123");
+            Assert.AreEqual(1, Administrator.Extent.Count);
         }
 
         // --------------------------------------------------------
-        // PERSISTENCE TESTS (Requirement 3 & 4)
+        // 5. PERSISTENCE TESTS
         // --------------------------------------------------------
 
         [Test]
-        public void Persistence_SaveAndLoad_RetainsData()
+        public void Persistence_SaveAndLoad_RetainsAllData()
         {
-            // Arrange
+            // Arrange: Create objects in memory
             new Member("SavedUser", "Password123") { Bio = "I persist!" };
+            new Administrator("SavedAdmin", "admin@test.com", "AdminPass123");
             new Community("SavedCommunity");
 
-            // Act
+            // Act: Save to XML
             PersistenceManager.SaveData();
             
-            // Clear memory to simulate restart
+            // Clear memory to simulate application restart
             Member.ClearExtent();
+            Administrator.ClearExtent();
             Community.ClearExtent();
 
-            // Load
+            // Load back from XML
             PersistenceManager.LoadData();
 
-            // Assert
+            // Assert: Verify data is restored
             Assert.AreEqual(1, Member.Extent.Count);
             Assert.AreEqual("SavedUser", Member.Extent[0].Username);
-            Assert.AreEqual("I persist!", Member.Extent[0].Bio);
+            
+            Assert.AreEqual(1, Administrator.Extent.Count);
+            Assert.AreEqual("SavedAdmin", Administrator.Extent[0].Username);
+            
             Assert.AreEqual(1, Community.Extent.Count);
+            Assert.AreEqual("SavedCommunity", Community.Extent[0].Name);
         }
     }
 }

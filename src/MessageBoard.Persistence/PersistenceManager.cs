@@ -11,6 +11,8 @@ namespace MessageBoard.Persistence
     public class DataContainer
     {
         public List<Member> Members { get; set; } = new List<Member>();
+        // Added Administrator list
+        public List<Administrator> Administrators { get; set; } = new List<Administrator>();
         public List<Community> Communities { get; set; } = new List<Community>();
         public List<Post> Posts { get; set; } = new List<Post>();
     }
@@ -21,9 +23,11 @@ namespace MessageBoard.Persistence
 
         public static void SaveData()
         {
+            // Capture current state of all extents
             var container = new DataContainer
             {
                 Members = new List<Member>(Member.Extent),
+                Administrators = new List<Administrator>(Administrator.Extent), // Save Admins
                 Communities = new List<Community>(Community.Extent),
                 Posts = new List<Post>(Post.Extent)
             };
@@ -48,13 +52,15 @@ namespace MessageBoard.Persistence
                     
                     // Restore extents
                     Member.SetExtent(container.Members);
+                    Administrator.SetExtent(container.Administrators); // Load Admins
                     Community.SetExtent(container.Communities);
                     Post.SetExtent(container.Posts);
                 }
                 catch (Exception)
                 {
-                    // Handle corruption or empty files
+                    // Handle corruption or empty files by clearing all lists
                     Member.ClearExtent();
+                    Administrator.ClearExtent();
                     Community.ClearExtent();
                     Post.ClearExtent();
                 }
