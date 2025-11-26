@@ -3,51 +3,60 @@ using System.Collections.Generic;
 
 namespace MessageBoard.Domain
 {
-    public class Administrator
+public class Administrator
+{
+    private static List<Administrator> _adminCache = new List<Administrator>();
+   
+    public static IReadOnlyList<Administrator> Extent => _adminCache.AsReadOnly();
+
+    public static void SetExtent(List<Administrator> list)
     {
-        // Class Extent
-        private static List<Administrator> _extent = new List<Administrator>();
-        public static IReadOnlyList<Administrator> Extent => _extent.AsReadOnly();
-        public static void SetExtent(List<Administrator> list) => _extent = list ?? new List<Administrator>();
-        public static void ClearExtent() => _extent.Clear();
+        _adminCache = list ?? new List<Administrator>();
+    }
 
-        // Basic Attributes (from User class definition)
-        public string Username { get; set; }
-        public string Email { get; set; }
+    public static void ClearExtent() => _adminCache.Clear();
+
+    public string Username { get; set; }
+
+    public string Email { get; set; }
+
+    private string _pwd;
+
+    public string Password
+    {
+        get => _pwd;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value) || value.Length < 8)
+                throw new ArgumentException("Password must be at least 8 characters. C’mon, security matters…");
+
+            _pwd = value;
+        }
+    }
+
+    public Administrator()
+    {
         
-        private string _password;
-        public string Password
-        {
-            get => _password;
-            set
-            {
-                // Reusing the static rule from Member or defining its own
-                if (string.IsNullOrWhiteSpace(value) || value.Length < 8) 
-                    throw new ArgumentException("Password must be at least 8 characters.");
-                _password = value;
-            }
-        }
+    }
 
-        // Constructor
-        public Administrator() { } // For serialization
-        public Administrator(string username, string email, string password)
-        {
-            Username = username;
-            Email = email;
-            Password = password;
-            _extent.Add(this);
-        }
+    public Administrator(string username, string email, string password)
+    {
+        Username = username;
+        Email = email;
+        Password = password;
 
-        // Methods for Administrator actions (Placeholders for future assignments)
-        public void BanUser(Member member) 
-        {
-            // Logic to ban user
-        }
+        _adminCache.Add(this);
+    }
 
-        public void AwardBadge(Member member, BadgeType badge)
-        {
-            member.AddBadge(badge);
-        }
+    public void BanUser(Member member)
+    {
+        
+    }
+
+    public void AwardBadge(Member member, BadgeType badge)
+    {
+        member.AddBadge(badge);
     }
 }
 
+}

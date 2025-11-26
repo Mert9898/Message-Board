@@ -1,0 +1,16 @@
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\bin\Debug\net7.0\MessageBoard.Persistence.deps.json
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\bin\Debug\net7.0\MessageBoard.Persistence.dll
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\bin\Debug\net7.0\MessageBoard.Persistence.pdb
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\bin\Debug\net7.0\MessageBoard.Domain.dll
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\bin\Debug\net7.0\MessageBoard.Domain.pdb
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.csproj.AssemblyReference.cache
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.AssemblyInfoInputs.cache
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.AssemblyInfo.cs
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.csproj.CoreCompileInputs.cache
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.sourcelink.json
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageB.E3745D6A.Up2Date
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.dll
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\refint\MessageBoard.Persistence.dll
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\MessageBoard.Persistence.pdb
+c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Persistence\obj\Debug\net7.0\ref\MessageBoard.Persistence.dll

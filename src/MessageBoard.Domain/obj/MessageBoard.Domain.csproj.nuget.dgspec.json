@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {}
+    "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
+    "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
         "projectName": "MessageBoard.Domain",
-        "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
+        "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
         "packagesPath": "C:\\Users\\yzmrt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\obj\\",
+        "outputPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yzmrt\\AppData\\Roaming\\NuGet\\NuGet.Config"

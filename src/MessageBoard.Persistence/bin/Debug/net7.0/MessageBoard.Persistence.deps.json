@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "MessageBoard.Persistence/1.0.0": {
+        "dependencies": {
+          "MessageBoard.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MessageBoard.Persistence.dll": {}
+        }
+      },
+      "MessageBoard.Domain/1.0.0": {
+        "runtime": {
+          "MessageBoard.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MessageBoard.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MessageBoard.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

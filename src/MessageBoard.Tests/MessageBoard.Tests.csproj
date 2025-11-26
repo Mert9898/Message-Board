@@ -10,6 +10,7 @@
   <ItemGroup>
     <!-- References the Domain project -->
     <ProjectReference Include="..\MessageBoard.Domain\MessageBoard.Domain.csproj" />
+    <ProjectReference Include="..\MessageBoard.Persistence\MessageBoard.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

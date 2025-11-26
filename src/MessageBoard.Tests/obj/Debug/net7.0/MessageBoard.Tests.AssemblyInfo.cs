@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MessageBoard.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7a16db6b625e9ec0d1882033a02d53b55ff9254")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80827b00497090c782433053b4bb39118fa934e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MessageBoard.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MessageBoard.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj": {}
+    "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
+    "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
         "projectName": "MessageBoard.Domain",
-        "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
+        "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
         "packagesPath": "C:\\Users\\yzmrt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\obj\\",
+        "outputPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yzmrt\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj": {
+    "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
+        "projectUniqueName": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
         "projectName": "MessageBoard.Persistence",
-        "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
+        "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
         "packagesPath": "C:\\Users\\yzmrt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\obj\\",
+        "outputPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yzmrt\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -99,8 +99,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
-                "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj"
+              "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
+                "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj"
               }
             }
           }

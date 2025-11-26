@@ -391,6 +391,19 @@
         "runtime": {
           "bin/placeholder/MessageBoard.Domain.dll": {}
         }
+      },
+      "MessageBoard.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MessageBoard.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MessageBoard.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MessageBoard.Persistence.dll": {}
+        }
       }
     }
   },
@@ -990,11 +1003,17 @@
       "type": "project",
       "path": "../MessageBoard.Domain/MessageBoard.Domain.csproj",
       "msbuildProject": "../MessageBoard.Domain/MessageBoard.Domain.csproj"
+    },
+    "MessageBoard.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../MessageBoard.Persistence/MessageBoard.Persistence.csproj",
+      "msbuildProject": "../MessageBoard.Persistence/MessageBoard.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "MessageBoard.Domain >= 1.0.0",
+      "MessageBoard.Persistence >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.6.1",
@@ -1027,8 +1046,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
-              "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj"
+            "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
+              "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj"
+            },
+            "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj": {
+              "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj"
             }
           }
         }
