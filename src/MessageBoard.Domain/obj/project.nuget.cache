@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "t8jxGwR1KZo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yzmrt\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\yzmrt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\yzmrt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}
