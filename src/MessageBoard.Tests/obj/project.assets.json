@@ -1027,11 +1027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Tests\\MessageBoard.Tests.csproj",
+      "projectUniqueName": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Tests\\MessageBoard.Tests.csproj",
       "projectName": "MessageBoard.Tests",
-      "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Tests\\MessageBoard.Tests.csproj",
+      "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Tests\\MessageBoard.Tests.csproj",
       "packagesPath": "C:\\Users\\yzmrt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Tests\\obj\\",
+      "outputPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yzmrt\\AppData\\Roaming\\NuGet\\NuGet.Config"
