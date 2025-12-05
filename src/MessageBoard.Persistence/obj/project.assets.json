@@ -51,8 +51,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
-              "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj"
+            "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj": {
+              "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Domain\\MessageBoard.Domain.csproj"
             }
           }
         }
