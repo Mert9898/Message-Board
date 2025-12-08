@@ -1,0 +1,15 @@
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\bin\Debug\net8.0\Message-Board.exe
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\bin\Debug\net8.0\Message-Board.deps.json
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\bin\Debug\net8.0\Message-Board.runtimeconfig.json
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\bin\Debug\net8.0\Message-Board.dll
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\bin\Debug\net8.0\Message-Board.pdb
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.AssemblyInfoInputs.cache
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.AssemblyInfo.cs
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.csproj.CoreCompileInputs.cache
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.sourcelink.json
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.dll
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\refint\Message-Board.dll
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.pdb
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\Message-Board.genruntimeconfig.cache
+C:\Users\miron\RiderProjects\Message-Board\src\MessageBoard.Classes\obj\Debug\net8.0\ref\Message-Board.dll
