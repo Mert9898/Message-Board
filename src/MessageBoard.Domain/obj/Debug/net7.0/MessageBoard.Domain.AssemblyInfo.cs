@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MessageBoard.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e2af85010ef255ab466588eb5d820ccb1313614")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+730b878b771587f3d3fc93fdcecd97fc0da333dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("MessageBoard.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MessageBoard.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
