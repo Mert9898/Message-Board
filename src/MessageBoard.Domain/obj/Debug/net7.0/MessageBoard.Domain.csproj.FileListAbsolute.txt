@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Domain\bin\Debug\net7.0\MessageBoard.Domain.deps.json
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Domain\bin\Debug\net7.0\MessageBoard.Domain.dll
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Domain\bin\Debug\net7.0\MessageBoard.Domain.pdb
@@ -10,3 +11,5 @@ c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.D
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Domain\obj\Debug\net7.0\refint\MessageBoard.Domain.dll
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Domain\obj\Debug\net7.0\MessageBoard.Domain.pdb
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Domain\obj\Debug\net7.0\ref\MessageBoard.Domain.dll
+=======
+>>>>>>> Stashed changes

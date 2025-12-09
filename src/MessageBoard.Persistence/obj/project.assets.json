@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
       "projectName": "MessageBoard.Persistence",
-      "projectPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
+      "projectPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\MessageBoard.Persistence.csproj",
       "packagesPath": "C:\\Users\\yzmrt\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\obj\\",
+      "outputPath": "C:\\Users\\yzmrt\\OneDrive\\Masaüstü\\Port Scanner\\Message-Board\\src\\MessageBoard.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yzmrt\\AppData\\Roaming\\NuGet\\NuGet.Config"

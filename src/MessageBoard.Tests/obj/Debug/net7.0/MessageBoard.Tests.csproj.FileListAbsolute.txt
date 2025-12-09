@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Tests\bin\Debug\net7.0\CoverletSourceRootsMapping
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Tests\bin\Debug\net7.0\testhost.dll
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Tests\bin\Debug\net7.0\testhost.exe
@@ -103,3 +104,5 @@ c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.T
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Tests\obj\Debug\net7.0\MessageBoard.Tests.pdb
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Tests\obj\Debug\net7.0\MessageBoard.Tests.genruntimeconfig.cache
 c:\Users\yzmrt\OneDrive\Masaüstü\Port Scanner\Message-Board\src\MessageBoard.Tests\obj\Debug\net7.0\ref\MessageBoard.Tests.dll
+=======
+>>>>>>> Stashed changes

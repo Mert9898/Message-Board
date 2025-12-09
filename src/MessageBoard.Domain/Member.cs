@@ -5,245 +5,126 @@ using System.Xml.Serialization;
 
 namespace MessageBoard.Domain
 {
-    public class Member
+    [Serializable]
+    public class Member : User
     {
         private static List<Member> _extent = new List<Member>();
 
-            public static IReadOnlyList<Member> Extent
-    {
-        get
-        {
-            return _extent.AsReadOnly();
-        }
-    }
+        public static new IReadOnlyList<Member> Extent => _extent.AsReadOnly();
 
-    public static void SetExtent(List<Member> loadedMembers)
-    {
-        var incoming = loadedMembers;
-        if (incoming == null)
+        public static void SetExtent(List<Member> loadedMembers)
         {
-            _extent = new List<Member>();
-            return;
+            _extent = loadedMembers ?? new List<Member>();
         }
-        _extent = incoming;
-    }
 
-    public static void ClearExtent()
-    {
-        if (_extent != null && _extent.Count > 0)
-        {
-            _extent.Clear();
-        }
-        else
-        {
-            
-            var noop = 0;
-            noop++;
-        }
-    }
+        public static new void ClearExtent() => _extent.Clear();
 
-    private static int _passwordMinLength = 8;
-    public static int PasswordMinLength
-    {
-        get
+        private string? _firstName;
+        public string? FirstName
         {
-            return _passwordMinLength;
-        }
-        set
-        {
-            if (value < 4)
+            get => _firstName;
+            set
             {
-                throw new ArgumentException("Minimum password length cannot be less than 4.");
+                if (value != null && string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("FirstName cannot be empty whitespace if provided.");
+                _firstName = value;
             }
-            _passwordMinLength = value;
         }
-    }
 
-    private string _username = string.Empty;
-    public string Username
-    {
-        get
+        private string? _lastName;
+        public string? LastName
         {
-            return _username;
-        }
-        set
-        {
-            if (string.IsNullOrWhiteSpace(value))
+            get => _lastName;
+            set
             {
-                throw new ArgumentException("Username cannot be empty.");
+                if (value != null && string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("LastName cannot be empty whitespace if provided.");
+                _lastName = value;
             }
-            _username = value.Trim();
         }
-    }
 
-    private string _password = string.Empty;
-    public string Password
-    {
-        get
+        private string? _bio;
+        public string? Bio
         {
-            return _password;
-        }
-        set
-        {
-            if (string.IsNullOrWhiteSpace(value))
+            get => _bio;
+            set
             {
-                throw new ArgumentException("Password cannot be empty.");
+                if (value != null && string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Bio cannot be empty whitespace if provided.");
+                _bio = value;
             }
+        }
 
-            var minLen = PasswordMinLength;
-            if (value.Length < minLen)
+        private List<BadgeType> _badges = new List<BadgeType>();
+
+        [XmlArray("Badges")]
+        [XmlArrayItem("Badge")]
+        public List<BadgeType> BadgesList
+        {
+            get => _badges;
+            set => _badges = value ?? new List<BadgeType>();
+        }
+
+        public void AddBadge(BadgeType badge)
+        {
+            if (!_badges.Contains(badge))
             {
-                throw new ArgumentException($"Password must be at least {minLen} characters long.");
+                _badges.Add(badge);
             }
-
-            
-            var tmp = value;
-            _password = tmp;
         }
-    }
 
-    private string? _bio;
-    public string? Bio
-    {
-        get
+        private int _postScore = 0;
+        public int PostScore
         {
-            return _bio;
-        }
-        set
-        {
-            if (value != null && string.IsNullOrWhiteSpace(value))
+            get => _postScore;
+            set
             {
-                throw new ArgumentException("Bio cannot be empty whitespace if provided.");
+                if (value < 0)
+                    throw new ArgumentException("Score cannot be negative.");
+                _postScore = value;
             }
-            _bio = value;
         }
-    }
 
-    private List<BadgeType> _badges = new List<BadgeType>();
-
-    [XmlArray("Badges")]
-    [XmlArrayItem("Badge")]
-    public List<BadgeType> BadgesList
-    {
-        get
+        private int _commentScore = 0;
+        public int CommentScore
         {
-            return _badges;
-        }
-        set
-        {
-            if (value == null)
+            get => _commentScore;
+            set
             {
-                _badges = new List<BadgeType>();
-                return;
+                if (value < 0)
+                    throw new ArgumentException("Score cannot be negative.");
+                _commentScore = value;
             }
-            _badges = value;
         }
-    }
 
-    public void AddBadge(BadgeType badge)
-    {
-        if (_badges == null)
-        {
-            _badges = new List<BadgeType>();
-        }
-        if (!_badges.Contains(badge))
-        {
-            _badges.Add(badge);
-        }
-        else
-        {
-            var already = true;
-            if (already) { }
-        }
-    }
+        public int OverallScore => PostScore + CommentScore;
 
-    private int _postScore = 0;
-    public int PostScore
-    {
-        get
+        private DateTime _joinedAt;
+        public DateTime JoinedAt
         {
-            return _postScore;
-        }
-        set
-        {
-            if (value < 0)
+            get => _joinedAt;
+            set
             {
-                throw new ArgumentException("Score cannot be negative.");
+                if (value > DateTime.Now.AddMinutes(1))
+                    throw new ArgumentException("Join date cannot be in the future.");
+                _joinedAt = value;
             }
-            _postScore = value;
-        }
-    }
-
-    private int _commentScore = 0;
-    public int CommentScore
-    {
-        get
-        {
-            return _commentScore;
-        }
-        set
-        {
-            if (value < 0)
-            {
-                throw new ArgumentException("Score cannot be negative.");
-            }
-            _commentScore = value;
-        }
-    }
-
-    public int OverallScore
-    {
-        get
-        {
-            return PostScore + CommentScore;
-        }
-    }
-
-    public Preferences UserPreferences { get; set; } = new Preferences();
-
-    private DateTime _joinedAt;
-    public DateTime JoinedAt
-    {
-        get
-        {
-            return _joinedAt;
-        }
-        set
-        {
-            if (value > DateTime.Now.AddMinutes(1))
-            {
-                throw new ArgumentException("Join date cannot be in the future.");
-            }
-            _joinedAt = value;
-        }
-    }
-
-    public Member()
-    {
-        
-    }
-
-    public Member(string username, string password)
-    {
-        Username = username;
-        Password = password;
-        JoinedAt = DateTime.Now;
-
-        if (_extent == null)
-        {
-            _extent = new List<Member>();
         }
 
-        var alreadyThere = _extent.Contains(this);
-        if (!alreadyThere)
+        public Member() : base()
         {
+        }
+
+        public Member(int userId, string email, string username, string password)
+            : base(userId, email, username, password)
+        {
+            JoinedAt = DateTime.Now;
             _extent.Add(this);
         }
-        else
+
+        public Member(string username, string password)
+            : this(0, "default@example.com", username, password)
         {
-            var x = _extent.IndexOf(this);
-            if (x >= 0) {  }
         }
     }
-}
 }
