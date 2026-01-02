@@ -57,6 +57,16 @@ namespace MessageBoard.Domain
 
         public Votes PostVotes { get; set; } = new Votes();
 
+        private Community? _community;
+        
+        [XmlIgnore]
+        public Community? Community => _community;
+
+        private List<Comment> _comments = new List<Comment>();
+        
+        [XmlIgnore]
+        public IReadOnlyList<Comment> Comments => _comments.AsReadOnly();
+
         protected Post()
         {
         }
@@ -69,6 +79,55 @@ namespace MessageBoard.Domain
             CreatedAt = DateTime.Now;
             
             _extent.Add(this);
+        }
+
+        public void SetCommunity(Community community)
+        {
+            if (_community == community) return;
+
+            _community = community;
+
+            if (community != null && !community.Posts.Contains(this))
+            {
+                community.AddPost(this);
+            }
+        }
+
+        internal void AddComment(Comment comment)
+        {
+            if (comment == null) return;
+            if (_comments.Contains(comment)) return;
+
+            _comments.Add(comment);
+
+            if (comment.Post != this)
+            {
+                comment.SetPost(this);
+            }
+        }
+
+        internal void RemoveComment(Comment comment)
+        {
+            if (comment == null) return;
+            _comments.Remove(comment);
+        }
+
+        public void Delete()
+        {
+            foreach (var comment in _comments.ToArray())
+            {
+                Comment.Extent.ToList().Remove(comment);
+                
+                comment.Delete();
+            }
+            _comments.Clear();
+
+            if (_community != null)
+            {
+                _community.RemovePost(this);
+            }
+
+            _extent.Remove(this);
         }
     }
 }

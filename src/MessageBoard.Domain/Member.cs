@@ -111,6 +111,11 @@ namespace MessageBoard.Domain
             }
         }
 
+        private List<Subscription> _subscriptions = new List<Subscription>();
+
+        [XmlIgnore]
+        public IReadOnlyList<Subscription> Subscriptions => _subscriptions.AsReadOnly();
+
         public Member() : base()
         {
         }
@@ -125,6 +130,46 @@ namespace MessageBoard.Domain
         public Member(string username, string password)
             : this(0, "default@example.com", username, password)
         {
+        }
+
+        internal void AddSubscription(Subscription subscription)
+        {
+            if (subscription == null)
+                throw new ArgumentNullException(nameof(subscription));
+
+            if (_subscriptions.Contains(subscription)) return;
+
+            _subscriptions.Add(subscription);
+        }
+
+        internal void RemoveSubscription(Subscription subscription)
+        {
+            if (subscription == null) return;
+            _subscriptions.Remove(subscription);
+        }
+
+        public Subscription? GetSubscription(Community community)
+        {
+            if (community == null)
+                throw new ArgumentNullException(nameof(community));
+
+            foreach (var subscription in _subscriptions)
+            {
+                if (subscription.Community == community)
+                    return subscription;
+            }
+            return null;
+        }
+
+        public bool IsSubscribedTo(Community community)
+        {
+            return GetSubscription(community) != null;
+        }
+
+        public bool IsModeratorOf(Community community)
+        {
+            var subscription = GetSubscription(community);
+            return subscription != null && subscription.IsModerator;
         }
     }
 }

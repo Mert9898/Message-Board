@@ -80,6 +80,16 @@ namespace MessageBoard.Domain
                 _moderators.Add(username);
         }
 
+        private HashSet<Post> _posts = new HashSet<Post>();
+
+        [XmlIgnore]
+        public IReadOnlyCollection<Post> Posts => _posts;
+
+        private Dictionary<string, Subscription> _subscribers = new Dictionary<string, Subscription>();
+
+        [XmlIgnore]
+        public IReadOnlyCollection<Subscription> Subscriptions => _subscribers.Values;
+
         public Community()
         {
         }
@@ -89,6 +99,65 @@ namespace MessageBoard.Domain
             Name = name;
             IsPrivate = false;
             _extent.Add(this);
+        }
+
+        public void AddPost(Post post)
+        {
+            if (post == null)
+                throw new ArgumentNullException(nameof(post));
+
+            if (_posts.Contains(post)) return;
+
+            _posts.Add(post);
+
+            if (post.Community != this)
+            {
+                post.SetCommunity(this);
+            }
+        }
+
+        internal void RemovePost(Post post)
+        {
+            if (post == null) return;
+            _posts.Remove(post);
+        }
+
+        internal void AddSubscriber(Subscription subscription)
+        {
+            if (subscription == null)
+                throw new ArgumentNullException(nameof(subscription));
+
+            if (subscription.Member == null)
+                throw new InvalidOperationException("Subscription must have a valid member.");
+
+            string username = subscription.Member.Username;
+
+            if (_subscribers.ContainsKey(username))
+                throw new InvalidOperationException($"Member '{username}' is already subscribed to this community.");
+
+            _subscribers[username] = subscription;
+        }
+
+        public Subscription? GetSubscriber(string username)
+        {
+            if (string.IsNullOrWhiteSpace(username))
+                throw new ArgumentException("Username cannot be empty.");
+
+            _subscribers.TryGetValue(username, out var subscription);
+            return subscription;
+        }
+
+        public bool IsSubscribed(string username)
+        {
+            return _subscribers.ContainsKey(username);
+        }
+
+        internal void RemoveSubscriber(Subscription subscription)
+        {
+            if (subscription == null || subscription.Member == null) return;
+            
+            string username = subscription.Member.Username;
+            _subscribers.Remove(username);
         }
     }
 }
