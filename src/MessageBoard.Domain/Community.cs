@@ -60,7 +60,7 @@ namespace MessageBoard.Domain
 
         private List<string> _moderators = new List<string>();
 
-        [XmlArray("Moderators")]
+        [ XmlArray("Moderators")]
         [XmlArrayItem("Username")]
         public List<string> ModeratorList
         {
